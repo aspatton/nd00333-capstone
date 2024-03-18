@@ -2,7 +2,11 @@
 
 This is the Capstone project for the Udacity Course - ML Engineer with Microsoft Azure.
 
-A dataset is trained and analyzed using two approaches - HyperParameter and AutoML.
+This project provides the opportunity to use the knowledge obtained from the course to solve an interesting problem. In this project, two models are created: one using AutoML plus one customized model whose hyperparameters are tuned using HyperDrive. The performance of both the models is compared/contrasted and best performing model is deployed.
+
+This project demonstrates the ability to use external datasets, train a model using different AzureML framework tools available as well as the ability to deploy the model as a web service.
+
+Both Hyperdrive and AutoML API are used in this project.
 
 ## Project Set Up and Installation
 
@@ -11,7 +15,14 @@ A dataset is trained and analyzed using two approaches - HyperParameter and Auto
 - Added nd00333-capstone project to my github from udacity's instance.
 - Editing/updated readme.md
 - Uploaded code to my workspace.
-- 
+- Imported dataset in the workspace (penguins.csv)
+- Train model using AutoML
+- Train model using HyperDrive
+- Compare model performance - AutoML vs HyperDrive
+- Select the best performing model via the comparison
+- Deploy the best performing model as a web service
+- Test the model
+- Deploy pipeline for the best performing model
 
 ## Dataset - penguins.csv
 
