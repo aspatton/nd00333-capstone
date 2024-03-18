@@ -1,5 +1,3 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
-
 # Udacity ML Engineer with Microsoft Azure - Capstone Project
 
 This is the Capstone project for the Udacity Course - ML Engineer with Microsoft Azure.
@@ -7,12 +5,23 @@ This is the Capstone project for the Udacity Course - ML Engineer with Microsoft
 A dataset is trained and analyzed using two approaches - HyperParameter and AutoML.
 
 ## Project Set Up and Installation
-*OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
+
+- Created new workspace called udacity-capstone
+- Created new compute instance (DS-3) to be used by workspace/notebooks.
+- Added nd00333-capstone project to my github from udacity's instance.
+- Editing/updated readme.md
+- Uploaded code to my workspace.
+- 
 
 ## Dataset - penguins.csv
 
+This project uses the Palmer Archipelago penguin data from Kaggle -> https://www.kaggle.com/datasets/parulpandey/palmer-archipelago-antarctica-penguin-data
+
 ### Overview
-Data contains penguins.
+
+Palmer Archipelago (Antarctica) penguin data
+
+Data collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.
 
 ### Task
 *TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
