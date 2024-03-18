@@ -1,16 +1,18 @@
 *NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
 
-# Your Project Title Here
+# Udacity ML Engineer with Microsoft Azure - Capstone Project
 
-*TODO:* Write a short introduction to your project.
+This is the Capstone project for the Udacity Course - ML Engineer with Microsoft Azure.
+
+A dataset is trained and analyzed using two approaches - HyperParameter and AutoML.
 
 ## Project Set Up and Installation
 *OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
 
-## Dataset
+## Dataset - penguins.csv
 
 ### Overview
-*TODO*: Explain about the data you are using and where you got it from.
+Data contains penguins.
 
 ### Task
 *TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
