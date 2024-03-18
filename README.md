@@ -24,6 +24,8 @@ Both Hyperdrive and AutoML API are used in this project.
 - Test the model
 - Deploy pipeline for the best performing model
 
+![overview](./capstone-diagram.png)
+
 ## Dataset - penguins.csv
 
 This project uses the Palmer Archipelago penguin data from Kaggle -> https://www.kaggle.com/datasets/parulpandey/palmer-archipelago-antarctica-penguin-data
