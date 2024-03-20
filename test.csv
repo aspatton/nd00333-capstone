@@ -1,0 +1,272 @@
+Category,Input,Normalization
+Form,tab(let)(s),tablet
+Form,pill(s),tablet
+Form,tabletlet,tablet
+Form,cap(sule)(s),capsule
+Form,capsulesule,capsule
+Form,puff(s),puff
+Form,pf(f)(s),puff
+Form,drop(s),drop
+Form,gt(t)(s),drop
+Form,dropperful(s),dropperful
+Form,inhalation(s),inhalation
+Form,inh(s),inhalation
+Form,spray(s),spray
+Form,spr(y)(s),spray
+Form,sq(ui)rt(s),squirt
+Form,teaspoon(ful)(s),teaspoonsful
+Form,tea(s),teaspoonsful
+Form,tsp(s),teaspoonsful
+Form,tablespoon(ful)(s),tablespoonsful
+Form,tb(s)p(s),tablespoonsful
+Form,applicator(ful)(s),applicatorful
+Form,apfl(s),applicatorful
+Form,applicatorsful,applicatorful
+Form,scoop(ful)(s),scoopful
+Form,sccopsful(s),scoopful
+Form,suppositories,suppository
+Form,sup(p)(s),suppository
+Form,vial(s),vial
+Form,neb(ule)(s) ,vial
+Form,pen needle,penneedle 
+Frequency,d,day
+Frequency,every( )day,daily
+Frequency,qd(ay),daily
+Frequency,a day,daily
+Frequency,per day,daily
+Frequency,dailyx90,daily
+Frequency,dailyay,daily
+Frequency,once,1 time
+Frequency,1 x,1 time
+Frequency,oad,1 time daily
+Frequency,twice,2 times
+Frequency,2 x,2 times
+Frequency,bid,2 times daily
+Frequency,3 x,3 times
+Frequency,tid,3 times daily
+Frequency,4 x,4 times
+Frequency,qid,4 times daily
+Frequency,5 x,5 times
+Frequency,6 x,6 times
+Frequency,7 x,7 times
+Frequency,8 x,8 times
+Frequency,9 x,9 times
+Frequency,(q)am,morning
+Frequency,(q)pm,evening
+Frequency,am (and) pm,morning and evening
+Frequency,pm (and) am,evening and morning 
+Frequency,qn,nightly
+Frequency,bed (time),bedtime
+Frequency,(q)hs,at bedtime
+Frequency,qod,every other day
+Frequency,qoam,every other morning
+Frequency,q5 m(in),every 5 minutes
+Frequency,min(s),minutes
+Frequency,30 minute(s),1/2 hour
+Frequency,30 min(s),1/2 hour
+Frequency,hr(s),hours
+Frequency,60 minute(s),1 hour
+Frequency,wk(s),weeks
+Frequency,qw(k),weekly
+Frequency,qweek(ly),weekly
+Frequency,per week,weekly
+Frequency,(once) a week,weekly
+Frequency,every week,weekly
+Frequency,biw,2 times weekly
+Frequency,tiw,3 times weekly
+Frequency,qiw,4 times weekly
+Frequency,qm,monthly
+Frequency,qmonth(ly),monthly
+Frequency,per month,monthly
+Frequency,a month,monthly
+Frequency,every month,monthly
+frequency,months,month
+Frequency,ac,before meals
+Frequency,qac,before each meal
+Frequency,pc,after meals
+Frequency,each meal,every meal
+Frequency,morning meal,breakfast
+Frequency,each day,every day
+Frequency,q1,every 1
+Frequency,q2,every 2
+Frequency,q3,every 3
+Frequency,q4,every 4
+Frequency,q5,every 5
+Frequency,q6,every 6
+Frequency,q7,every 7
+Frequency,q8,every 8
+Frequency,q12,every 12
+Frequency,q14,every 14
+Frequency,q24,every 24
+Frequency,q28,every 28
+Frequency,q48,every 48
+Frequency,3 rd,third
+Frequency,tue(s),Tuesday
+Frequency,wed,Wednesday
+Frequency,thu(r)(s),Thursday
+Frequency,fri,Friday
+Frequency,sat,Saturday
+Frequency,sun,Sunday
+Frequency,mwf,"Monday, Wednesday, Friday"
+Frequency,"mon, wed, (and) fri","Monday, Wednesday, Friday"
+Frequency,"mo, we, (and) fr","Monday, Wednesday, Friday"
+Frequency,"tues, thurs, sat, (and) sun ","Tuesday, Thursday, Saturday, and Sunday"
+Frequency,"tue, thu, sat, (and) sun","Tuesday, Thursday, Saturday, and Sunday"
+Frequency,"tu, th, sa, (and) su","Tuesday, Thursday, Saturday, and Sunday"
+Frequency,ttss,"Tuesday, Thursday, Saturday, and Sunday"
+Frequency,tths,"Tuesday, Thursday, Saturday"
+Frequency,tuthsat,"Tuesday, Thursday, Saturday"
+Frequency,"tues,thurs,sat","Tuesday, Thursday, Saturday"
+Frequency,"tues, thurs, (and) sat","Tuesday, Thursday, Saturday"
+Frequency,"tue, thu, (and) sat","Tuesday, Thursday, Saturday"
+Frequency,"tu, thu, (and) sa","Tuesday, Thursday, Saturday"
+Frequency,"tues, thurs, (and) sun","Tuesday, Thursday, Sunday"
+Frequency,"tue, thu, (and) sun","Tuesday, Thursday, Sunday"
+Frequency,"tu, th, (and) su","Tuesday, Thursday, Sunday"
+Frequency,mon-fri,Monday through Friday
+Frequency,m-f,Monday through Friday
+Frequency,mon to fri,Monday through Friday
+Frequency,mon-sat,Monday through Saturday
+Frequency,times/day,times daily
+Frequency,x/day,times daily
+Frequency,prn,as needed
+ROA,1 application to affected area(s),to affected area
+ROA,aa,to affected area
+ROA,by inhalation (route),
+ROA,oral(ly),by mouth
+ROA,by oral(ly) (route),by mouth
+ROA,po,by mouth
+ROA,orallyly,by mouth
+ROA,top(ical),topically 
+ROA,on skin,topically 
+ROA,external(ly),topically 
+ROA,by topical(ly) (route),topically
+ROA,by transdermal(ly) (route),topically
+ROA,subcut(aneous)  ,subcutaneously
+ROA,sq,subcutaneously
+ROA,sc,subcutaneously
+ROA,under (the) skin,subcutaneously
+ROA,sub(-)q,subcutaneously
+ROA,by subcutaneous(ly) (route),subcutaneously
+ROA,svn,via nebulizer
+ROA,via neublization,via nebulizer
+ROA,by nebulization (route),via nebulizer
+ROA,intravaginally,vaginally
+ROA,in(to) (the) vagina,vaginally
+ROA,per vagina,vaginally
+ROA,by vaginal(ly) (route),vaginally
+ROA,pv,vaginally
+ROA,vag  ,vaginally
+ROA,rect(al)  ,rectally
+ROA,per rectum,rectally
+ROA,pr,rectally
+ROA,by rectal(ly) (route),rectally
+ROA,sublingual(ly),under the tongue
+ROA,by sublingual(ly) (route),under the tongue
+ROA,sublin(g),under the tongue
+ROA,os,into the left eye
+ROA,od,into the right eye
+ROA,ou,into both eyes
+ROA,iv,intravenously
+ROA,by intravenous(ly) (route),intravenously
+ROA,by (intra)nasal(ly) (route),nasally
+ROA,nasal,nasally
+ROA,both nostril(s),each nostril
+ROA,each nare(s),each nostril
+ROA,both nare(s),each nostril
+ROA,ien,into each nostril 
+ROA,spray 1 spray(s),1 spray
+ROA,spray 2 spray(s),2 sprays
+ROA,in(to) (the) muscle,intramuscularly
+ROA,im,intramuscularly
+ROA,by intramuscular(ly) (route),intramuscularly
+ROA,via aerolizer,using the aerolizer
+ROA,vip,via insulin pump
+Verb,aaa,apply to affected area
+Verb,csw,chew and swallow
+Verb,chk,check
+Verb,u ,use
+Verb,tk,take
+Verb,te,test
+Verb,app,apply
+Verb,adm(in),administer
+Verb,dis(s),dissolve
+Verb,liq,liquid
+Verb,dil,dilute
+Verb,inh,inhale
+Verb,inj,inject
+Verb,rec(on),reconstitute
+Other,one,1
+Other,two ,2
+Other,three,3
+Other,four,4
+Other,five,5
+Other,six,6
+Other,seven,7
+Other,eight,8
+Other,nine,9
+Other,ten,10
+Other,twelve ,12
+Other,fourteen,14
+Other,twenty-four,24
+Other,twenty-eight,28
+Other,forty-eight,48
+Other,one-quarter,1/4
+Other,one quarter,1/4
+Other,(a) quarter,1/4
+Other,0.25,1/4
+Other,one-half,1/2
+Other,one half,1/2
+Other,(a) half,1/2
+Other,.5,1/2
+Other,0.5,1/2
+Other,1 1/2,1 and 1/2
+Other,1.5,1 and 1/2
+Other,1 to 1/2,1 and 1/2
+Other,2 1/2,2 and 1/2
+Other,2.5,2 and 1/2
+Other,q,every
+Other,thru,through
+Other,appt,appointment
+Other,ad,as directed
+Other,w/in,within
+Other,pat,patch
+Other,amt,amount
+Other,w/,with 
+Other,w/o,without
+Other,nte,not to exceed
+Other,ss,sliding scale
+Other,tdd,total daily dose
+Other,mdd,max daily dose
+Other,es,on empty stomach 
+Other,h2 O,water
+Other,h20,water
+Other,wf,with food
+Other,&,and
+Other,+,and
+Other,er 24 hr,
+Other,oral(ly) 30 day(s) (supply),
+Other,oral(ly) 60 day(s) (supply),
+Other,oral(ly) 90 day(s) (supply),
+Other,oral(ly) 120 day(s) (supply),
+Other,oral(ly) 30,
+Other,oral(ly) 60,
+Other,oral(ly) 90,
+Other,oral(ly) 120,
+Other,for 30 day(s) (supply),
+Other,for 60 day(s) (supply),
+Other,for 90 day(s) (supply),
+Other,for 120 day(s) (supply),
+Other,dr,
+Other,inhalation 30 day(s),
+Other,inhalation 60 day(s),
+Other,inhalation 90 day(s),
+Other,inhalation 120 day(s),
+Other,for 1 month(s),
+Other,for 3 month(s),
+Other,er,
+Other,DX(:),
+Other,milliliter(s),ml
+Other,milligram(s),mg
+Other,oz,ounce
+Other,gm(s),grams
