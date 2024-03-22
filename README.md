@@ -36,8 +36,9 @@ Palmer Archipelago (Antarctica) penguin data
 
 Data collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.
 
-### Task
-*TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
+### Problem Statement
+
+In this project we will consider a regression problem, i.e. a process where a model learns to predict a continuous value output for a given input data. We first apply AutoML where multiple models are trained to fit the training data. We then choose and save the best model, that is, the model with the best score. Secondly, we build a simple neural network consisting of two hidden layers. In particular, a keras model where we tune hyperparameters using HyperDrive.
 
 ### Access
 *TODO*: Explain how you are accessing the data in your workspace.
