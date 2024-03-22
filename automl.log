@@ -1,0 +1,2536 @@
+2024-03-21 01:33:13.515 - INFO - 24760 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 01:33:13.538 - INFO - 24760 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 01:33:13.560 - INFO - 24760 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-21 01:33:15.496 - INFO - 24760 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=1935.98[ms]
+2024-03-21 01:33:15.567 - INFO - 24760 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=2028.7[ms]
+2024-03-21 01:33:15.567 - INFO - 24760 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-21 01:33:32.442 - INFO - 24760 - azureml.automl.runtime.featurization.data_transformer.__init__:190 - Feature sweeping enabled: False
+2024-03-21 01:33:32.444 - INFO - 24760 - azureml.automl.runtime.featurization.data_transformer.__init__:191 - Feature sweeping timeout: 86400
+2024-03-21 01:33:45.374 - INFO - 24760 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Success, Duration=29806.36[ms]
+2024-03-21 01:33:45.429 - INFO - 24760 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=31914.06[ms]
+2024-03-21 21:30:35.336 - INFO - 4519 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 21:30:35.376 - INFO - 4519 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 21:30:35.407 - INFO - 4519 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-21 21:30:35.555 - INFO - 4519 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=148.47[ms]
+2024-03-21 21:30:35.619 - INFO - 4519 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=243.37[ms]
+2024-03-21 21:30:35.625 - INFO - 4519 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-21 21:30:38.600 - CRITICAL - 4519 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 56, in <module>
+    from azureml.automl.runtime.featurizer.transformer.categorical import LabelEncoderTransformer
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 21:30:38.736 - CRITICAL - 4519 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 56, in <module>
+    from azureml.automl.runtime.featurizer.transformer.categorical import LabelEncoderTransformer
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 21:30:38.737 - INFO - 4519 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=3111.52[ms]
+2024-03-21 21:30:38.746 - CRITICAL - 4519 - azureml.train.automl.run.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 718, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 56, in <module>
+    from azureml.automl.runtime.featurizer.transformer.categorical import LabelEncoderTransformer
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 21:30:38.746 - INFO - 4519 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=3410.51[ms]
+2024-03-21 21:41:03.180 - INFO - 4519 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 21:41:03.209 - INFO - 4519 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 21:41:03.230 - INFO - 4519 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-21 21:41:03.389 - INFO - 4519 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=159.06[ms]
+2024-03-21 21:41:03.441 - INFO - 4519 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=231.46[ms]
+2024-03-21 21:41:03.441 - INFO - 4519 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-21 21:41:04.062 - CRITICAL - 4519 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 21:41:04.196 - CRITICAL - 4519 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 21:41:04.196 - INFO - 4519 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=754.61[ms]
+2024-03-21 21:41:04.198 - CRITICAL - 4519 - azureml.train.automl.run.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 718, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 21:41:04.199 - INFO - 4519 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=1018.96[ms]
+2024-03-21 21:42:26.066 - INFO - 4519 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 21:42:26.090 - INFO - 4519 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 21:42:26.111 - INFO - 4519 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-21 21:42:26.241 - INFO - 4519 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=130.08[ms]
+2024-03-21 21:42:26.306 - INFO - 4519 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=215.42[ms]
+2024-03-21 21:42:26.306 - INFO - 4519 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-21 21:42:26.828 - CRITICAL - 4519 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 21:42:26.960 - CRITICAL - 4519 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 21:42:26.960 - INFO - 4519 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=654.07[ms]
+2024-03-21 21:42:26.962 - CRITICAL - 4519 - azureml.train.automl.run.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 718, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 21:42:26.963 - INFO - 4519 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=896.37[ms]
+2024-03-21 21:43:33.598 - INFO - 4519 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 21:43:33.636 - INFO - 4519 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 21:43:33.657 - INFO - 4519 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-21 21:43:33.838 - INFO - 4519 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=180.88[ms]
+2024-03-21 21:43:33.899 - INFO - 4519 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=262.98[ms]
+2024-03-21 21:43:33.899 - INFO - 4519 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-21 21:43:35.215 - CRITICAL - 4519 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 21:43:35.365 - CRITICAL - 4519 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 21:43:35.365 - INFO - 4519 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=1466.13[ms]
+2024-03-21 21:43:35.368 - CRITICAL - 4519 - azureml.train.automl.run.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 718, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 21:43:35.368 - INFO - 4519 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=1770.03[ms]
+2024-03-21 22:21:15.481 - INFO - 35135 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 22:21:15.517 - INFO - 35135 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 22:21:15.552 - INFO - 35135 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-21 22:21:15.693 - INFO - 35135 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=140.79[ms]
+2024-03-21 22:21:15.757 - INFO - 35135 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=239.83[ms]
+2024-03-21 22:21:15.762 - INFO - 35135 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-21 22:21:16.636 - CRITICAL - 35135 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 56, in <module>
+    from azureml.automl.runtime.featurizer.transformer.categorical import LabelEncoderTransformer
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 22:21:16.788 - CRITICAL - 35135 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 56, in <module>
+    from azureml.automl.runtime.featurizer.transformer.categorical import LabelEncoderTransformer
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 22:21:16.793 - INFO - 35135 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=1031.66[ms]
+2024-03-21 22:21:16.796 - CRITICAL - 35135 - azureml.train.automl.run.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 718, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 56, in <module>
+    from azureml.automl.runtime.featurizer.transformer.categorical import LabelEncoderTransformer
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 22:21:16.797 - INFO - 35135 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=1315.24[ms]
+2024-03-21 22:23:37.043 - INFO - 35135 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 22:23:37.068 - INFO - 35135 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 22:23:37.099 - INFO - 35135 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-21 22:23:37.379 - INFO - 35135 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=279.81[ms]
+2024-03-21 22:23:37.565 - INFO - 35135 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=496.73[ms]
+2024-03-21 22:23:37.566 - INFO - 35135 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-21 22:23:38.680 - CRITICAL - 35135 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 22:23:38.913 - CRITICAL - 35135 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 22:23:38.914 - INFO - 35135 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=1348.47[ms]
+2024-03-21 22:23:38.923 - CRITICAL - 35135 - azureml.train.automl.run.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 718, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 22:23:38.924 - INFO - 35135 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=1881.01[ms]
+2024-03-21 22:25:22.599 - INFO - 35135 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 22:25:22.622 - INFO - 35135 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 22:25:22.651 - INFO - 35135 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-21 22:25:22.952 - INFO - 35135 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=301.89[ms]
+2024-03-21 22:25:23.058 - INFO - 35135 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=436.09[ms]
+2024-03-21 22:25:23.058 - INFO - 35135 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-21 22:25:23.920 - CRITICAL - 35135 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 22:25:24.141 - CRITICAL - 35135 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 22:25:24.142 - INFO - 35135 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=1083.21[ms]
+2024-03-21 22:25:24.144 - CRITICAL - 35135 - azureml.train.automl.run.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 718, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 22:25:24.144 - INFO - 35135 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=1545.87[ms]
+2024-03-21 22:27:46.328 - INFO - 35135 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 22:27:46.357 - INFO - 35135 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 22:27:46.380 - INFO - 35135 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-21 22:27:46.529 - INFO - 35135 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=148.9[ms]
+2024-03-21 22:27:46.585 - INFO - 35135 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=227.68[ms]
+2024-03-21 22:27:46.585 - INFO - 35135 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-21 22:27:47.052 - CRITICAL - 35135 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 22:27:47.205 - CRITICAL - 35135 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 22:27:47.206 - INFO - 35135 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=620.55[ms]
+2024-03-21 22:27:47.208 - CRITICAL - 35135 - azureml.train.automl.run.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 718, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 22:27:47.209 - INFO - 35135 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=880.22[ms]
+2024-03-21 22:29:00.133 - INFO - 35135 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 22:29:00.158 - INFO - 35135 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-21 22:29:00.180 - INFO - 35135 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-21 22:29:00.326 - INFO - 35135 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=145.82[ms]
+2024-03-21 22:29:00.390 - INFO - 35135 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=232.28[ms]
+2024-03-21 22:29:00.390 - INFO - 35135 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-21 22:29:00.925 - CRITICAL - 35135 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 22:29:01.092 - CRITICAL - 35135 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 22:29:01.093 - INFO - 35135 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=702.59[ms]
+2024-03-21 22:29:01.095 - CRITICAL - 35135 - azureml.train.automl.run.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 718, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-21 22:29:01.096 - INFO - 35135 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=963.09[ms]
+2024-03-22 00:54:23.911 - INFO - 4173 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-22 00:54:23.968 - INFO - 4173 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-22 00:54:23.995 - INFO - 4173 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-22 00:54:24.146 - INFO - 4173 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=151.01[ms]
+2024-03-22 00:54:24.216 - INFO - 4173 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=248.52[ms]
+2024-03-22 00:54:24.222 - INFO - 4173 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-22 00:54:27.652 - CRITICAL - 4173 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 56, in <module>
+    from azureml.automl.runtime.featurizer.transformer.categorical import LabelEncoderTransformer
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-22 00:54:27.902 - CRITICAL - 4173 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 56, in <module>
+    from azureml.automl.runtime.featurizer.transformer.categorical import LabelEncoderTransformer
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-22 00:54:27.907 - INFO - 4173 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=3685.56[ms]
+2024-03-22 00:54:27.924 - CRITICAL - 4173 - azureml.train.automl.run.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 718, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 56, in <module>
+    from azureml.automl.runtime.featurizer.transformer.categorical import LabelEncoderTransformer
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-22 00:54:27.924 - INFO - 4173 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=4013.18[ms]
+2024-03-22 01:05:28.165 - INFO - 4173 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-22 01:05:28.194 - INFO - 4173 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-22 01:05:28.214 - INFO - 4173 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-22 01:05:28.349 - INFO - 4173 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=135.03[ms]
+2024-03-22 01:05:28.404 - INFO - 4173 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=209.52[ms]
+2024-03-22 01:05:28.404 - INFO - 4173 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-22 01:05:28.938 - CRITICAL - 4173 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-22 01:05:29.071 - CRITICAL - 4173 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-22 01:05:29.072 - INFO - 4173 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=667.45[ms]
+2024-03-22 01:05:29.083 - CRITICAL - 4173 - azureml.train.automl.run.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 718, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-22 01:05:29.083 - INFO - 4173 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=918.04[ms]
+2024-03-22 01:30:53.850 - INFO - 4173 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-22 01:30:53.889 - INFO - 4173 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-22 01:30:53.929 - INFO - 4173 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-22 01:30:54.148 - INFO - 4173 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=218.09[ms]
+2024-03-22 01:30:54.242 - INFO - 4173 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=352.95[ms]
+2024-03-22 01:30:54.242 - INFO - 4173 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-22 01:30:54.663 - CRITICAL - 4173 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-22 01:30:54.809 - CRITICAL - 4173 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-22 01:30:54.809 - INFO - 4173 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=567.29[ms]
+2024-03-22 01:30:54.812 - CRITICAL - 4173 - azureml.train.automl.run.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 718, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-22 01:30:54.812 - INFO - 4173 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=962.62[ms]
+2024-03-22 01:53:44.130 - INFO - 95459 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-22 01:53:44.157 - INFO - 95459 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-22 01:53:44.180 - INFO - 95459 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-22 01:53:44.317 - INFO - 95459 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=137.07[ms]
+2024-03-22 01:53:44.375 - INFO - 95459 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=218.91[ms]
+2024-03-22 01:53:44.381 - INFO - 95459 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-22 01:53:45.985 - CRITICAL - 95459 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 56, in <module>
+    from azureml.automl.runtime.featurizer.transformer.categorical import LabelEncoderTransformer
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-22 01:53:46.141 - CRITICAL - 95459 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 56, in <module>
+    from azureml.automl.runtime.featurizer.transformer.categorical import LabelEncoderTransformer
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-22 01:53:46.142 - INFO - 95459 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=1760.39[ms]
+2024-03-22 01:53:46.144 - CRITICAL - 95459 - azureml.train.automl.run.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 718, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 56, in <module>
+    from azureml.automl.runtime.featurizer.transformer.categorical import LabelEncoderTransformer
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-22 01:53:46.145 - INFO - 95459 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=2014.77[ms]
+2024-03-22 02:03:33.951 - INFO - 95459 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-22 02:03:33.974 - INFO - 95459 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-22 02:03:33.994 - INFO - 95459 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-22 02:03:34.533 - INFO - 95459 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=539.28[ms]
+2024-03-22 02:03:34.589 - INFO - 95459 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=614.96[ms]
+2024-03-22 02:03:34.590 - INFO - 95459 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-22 02:03:35.654 - CRITICAL - 95459 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-22 02:03:35.867 - CRITICAL - 95459 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-22 02:03:35.867 - INFO - 95459 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=1277.57[ms]
+2024-03-22 02:03:35.870 - CRITICAL - 95459 - azureml.train.automl.run.log_traceback:227 - Type: Unclassified
+Class: ImportError
+Message: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/anaconda/envs/azureml_py38/lib/python3.8/site-packages/urllib3/util/ssl_.py)
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 718, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "__init__.py", line 8, in <module>
+    from .data_transformer import DataTransformer, TransformerAndMapper
+  File "data_transformer.py", line 66, in <module>
+    from .generic_transformer import GenericTransformer
+  File "generic_transformer.py", line 15, in <module>
+    from ..featurizer.transformer import featurization_utilities
+  File "__init__.py", line 14, in <module>
+    from .data import DataProviders, WordEmbeddingsInfo
+  File "__init__.py", line 5, in <module>
+    from .data_providers import DataProviders
+  File "data_providers.py", line 7, in <module>
+    from .automl_wordembeddings_provider import AutoMLEmbeddingsProvider
+  File "automl_wordembeddings_provider.py", line 5, in <module>
+    from azureml.training.tabular.featurization.data.wordembeddings_provider import \
+  File "wordembeddings_provider.py", line 12, in <module>
+    from gensim.models.keyedvectors import KeyedVectors
+  File "__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "preprocessing.py", line 42, in <module>
+    from gensim import utils
+  File "utils.py", line 45, in <module>
+    from smart_open import open
+  File "__init__.py", line 27, in <module>
+    from .smart_open_lib import open, smart_open, register_compressor
+  File "smart_open_lib.py", line 30, in <module>
+    import boto3
+  File "__init__.py", line 16, in <module>
+    from boto3.session import Session
+  File "session.py", line 17, in <module>
+    import botocore.session
+  File "session.py", line 29, in <module>
+    import botocore.credentials
+  File "credentials.py", line 34, in <module>
+    from botocore.config import Config
+  File "config.py", line 16, in <module>
+    from botocore.endpoint import DEFAULT_TIMEOUT, MAX_POOL_CONNECTIONS
+  File "endpoint.py", line 22, in <module>
+    from botocore.awsrequest import create_request_object
+  File "awsrequest.py", line 24, in <module>
+    import botocore.utils
+  File "utils.py", line 32, in <module>
+    import botocore.httpsession
+  File "httpsession.py", line 10, in <module>
+    from urllib3.util.ssl_ import (
+
+ExceptionTarget: Unspecified
+2024-03-22 02:03:35.870 - INFO - 95459 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=1918.77[ms]
+2024-03-22 03:25:42.733 - INFO - 5151 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-22 03:25:42.760 - INFO - 5151 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-22 03:25:42.785 - INFO - 5151 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-22 03:25:42.946 - INFO - 5151 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=160.65[ms]
+2024-03-22 03:25:43.015 - INFO - 5151 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=255.22[ms]
+2024-03-22 03:25:43.021 - INFO - 5151 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-22 03:26:15.256 - INFO - 5151 - azureml.automl.runtime.featurization.data_transformer.__init__:190 - Feature sweeping enabled: False
+2024-03-22 03:26:15.262 - INFO - 5151 - azureml.automl.runtime.featurization.data_transformer.__init__:191 - Feature sweeping timeout: 86400
+2024-03-22 03:26:20.824 - INFO - 5151 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Success, Duration=37803.0[ms]
+2024-03-22 03:26:20.850 - INFO - 5151 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=38116.68[ms]
+2024-03-22 03:27:11.319 - INFO - 5151 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-22 03:27:11.348 - INFO - 5151 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-22 03:27:11.375 - INFO - 5151 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-22 03:27:11.511 - INFO - 5151 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=136.07[ms]
+2024-03-22 03:27:11.589 - INFO - 5151 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=241.04[ms]
+2024-03-22 03:27:11.595 - INFO - 5151 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-22 03:27:12.126 - INFO - 5151 - azureml.automl.runtime.featurization.data_transformer.__init__:190 - Feature sweeping enabled: False
+2024-03-22 03:27:12.132 - INFO - 5151 - azureml.automl.runtime.featurization.data_transformer.__init__:191 - Feature sweeping timeout: 86400
+2024-03-22 03:27:12.162 - INFO - 5151 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Success, Duration=566.75[ms]
+2024-03-22 03:27:12.168 - INFO - 5151 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=848.74[ms]
+2024-03-22 03:27:52.728 - INFO - 5151 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-22 03:27:52.759 - INFO - 5151 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2024-03-22 03:27:52.786 - INFO - 5151 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2024-03-22 03:27:52.923 - INFO - 5151 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=137.86[ms]
+2024-03-22 03:27:52.995 - INFO - 5151 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=236.25[ms]
+2024-03-22 03:27:53.001 - INFO - 5151 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2024-03-22 03:27:53.462 - INFO - 5151 - azureml.automl.runtime.featurization.data_transformer.__init__:190 - Feature sweeping enabled: False
+2024-03-22 03:27:53.462 - INFO - 5151 - azureml.automl.runtime.featurization.data_transformer.__init__:191 - Feature sweeping timeout: 86400
+2024-03-22 03:27:53.486 - INFO - 5151 - azureml.train.automl._model_download_utilities._log_activity:89 - ActivityCompleted: Activity=DownloadModel, HowEnded=Success, Duration=484.63[ms]
+2024-03-22 03:27:53.487 - INFO - 5151 - azureml.train.automl.run._log_activity:89 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=758.45[ms]
