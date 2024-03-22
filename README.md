@@ -105,8 +105,6 @@ Once the model is finished, the following screen shows the details of the run.
 
 ![automated](./screenshots/AutoML%20-%20run%20info.png)
 
-#### NOTE: The RunDetails widget not working.
-
 ### Best AutoML Model
 
 AutoML's best peforming model is VotingAlgorhthm with 0.82 Accuracy and 0.96 Weighted AUC.
@@ -176,7 +174,7 @@ The following screen shows the parameters setup via Python:
 
 The HyperDrive approach with the specified parameters resulted in 0.75 accuracy.
 
-![hyperdrive](./screenshots/Hyperdrive%20Job%20Performance.png)
+![hyperdrive](./screenshots/Hyperoarameter%20Job%20Performance.png)
 
 Best Hyperdrive Model:
 
