@@ -215,12 +215,16 @@ Files:
 - auto_best_run.pkl   : Best run model from AutoML saved
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+
+Screen recording of the following items 
+
+https://youtu.be/89jK8EMt6D4:
+
 - A working model
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
 
 ## Standout Suggestions
 
-- I tried various models/approaches via HyperDrive, but I could never improve the score stated in this overview.
+- I think reworking Hyperdrive/parameters with Keras/Tensorflow would greatly improve accuracy.
 - Tweak parameters with AutoML to measure success rate, get a trend.
