@@ -178,7 +178,6 @@ The HyperDrive approach with the specified parameters resulted in 0.75 accuracy.
 
 Best Hyperdrive Model:
 
-
 ![hyperdrive](./screenshots/Hyperdrive%20-%20best%20model.png)
 
 The model was deployed as hd_best_model, visible within Models in ML AI Studio.
@@ -207,6 +206,12 @@ Endpoint log info from the test:
 Delete the endpoint:
 
 ![hyperdrive](./screenshots/endpoint_delete.png)
+
+Files:
+
+- score_it.py         : Scoring file for best run
+- envfile.yml         : Environment file for best run
+- auto_best_run.pkl   : Best run model from AutoML saved
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
