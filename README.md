@@ -174,7 +174,7 @@ The following screen shows the parameters setup via Python:
 
 The HyperDrive approach with the specified parameters resulted in 0.75 accuracy.
 
-![hyperdrive](./screenshots/Hyperoarameter%20Job%20Performance.png)
+![hyperdrive](./screenshots/Hyperparameter%20Job%20Performance.png)
 
 Best Hyperdrive Model:
 
@@ -185,7 +185,6 @@ The model was deployed as hd_best_model, visible within Models in ML AI Studio.
 
 ![hyperdrive](./screenshots/Hyperdrive%20-%20best%20model%20registered.png)
 
-#### RunDetails widget will not work, continuous code errors.
 
 ## Model Deployment
 
