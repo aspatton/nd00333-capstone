@@ -119,7 +119,7 @@ The model was registered:
 
 ![automated](./screenshots/AutoML%20-%20Model%20registered.png)
 
-### For a complete code overview, we refer to the jypter notebook automl.ipynb.
+#### For a complete code overview, we refer to the jypter notebook automl.ipynb.
 
 ## Hyperparameter Tuning
 
@@ -184,6 +184,7 @@ The model was deployed as hd_best_model, visible within Models in ML AI Studio.
 
 ![hyperdrive](./screenshots/Hyperdrive%20-%20best%20model%20registered.png)
 
+#### For a complete code overview, we refer to the jypter notebook hyperparameter_tuning.ipynb.
 
 ## Model Deployment
 
