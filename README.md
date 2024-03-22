@@ -97,7 +97,10 @@ Working with the AutoML run we specify the classification task, the primary metr
 
 ### Run Details
 
-The next three screen show the job running and the details of the runs.
+#### NOTE AGAIN - The RunDetails widget is not working latest Azure AI - Machine Learning Studio which is Python 3.8 with AzureML 
+#### A ticket has been logged with MSFT, this was noted and not a problem with previous two project postings.
+
+The next three screen show the job running and the details of the runs with the output shown not using RunDetails widget.
 
 ![automated](./screenshots/AutoML%20-%20training%20run%20-%20part%201.png)
 
