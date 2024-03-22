@@ -2,19 +2,20 @@
 
 This is the Capstone project for the Udacity Course - ML Engineer with Microsoft Azure.
 
-This project provides the opportunity to use the knowledge obtained from the course to solve an interesting problem. In this project, two models are created: one using AutoML plus one customized model whose hyperparameters are tuned using HyperDrive. The performance of both the models is compared/contrasted and best performing model is deployed.
-
-This project demonstrates the ability to use external datasets, train a model using different AzureML framework tools available as well as the ability to deploy the model as a web service.
+This project provides the opportunity to use the knowledge obtained from the course to solve an interesting problem. In this project, two models are created: one using AutoML plus one customized model whose hyperparameters are tuned using HyperDrive. The performance of both the models is compared/contrasted and best performing model is deployed. This project demonstrates the ability to use external datasets, train a model using different AzureML framework tools available as well as the ability to deploy the model as a web service.
 
 Both Hyperdrive and AutoML API are used in this project.
+
+### Problem Statement
+
+In this project we attempt to solve the problem of classifying penguin species for a given input data. We first apply AutoML where multiple models are trained to fit the training data. Secondly, we use a LogicalRegression model while tuning hyperparameters using HyperDrive. Finally, the best model from the two approaches is chosen (in terms of accuracy) and deployed as a web service.
 
 ## Project Set Up and Installation
 
 - Created new workspace called udacity-capstone
-- Created new compute instance (DS-3) to be used by workspace/notebooks.
-- Added nd00333-capstone project to my github from udacity's instance.
-- Editing/updated readme.md
-- Uploaded code to my workspace.
+- Created new compute instance (DS-3) to be used by workspace/notebooks
+- Forked nd00333-capstone project to my github from Udacity's instance
+- Uploaded code to my workspace
 - Imported dataset in the workspace (penguins.csv)
 - Train model using AutoML
 - Train model using HyperDrive
@@ -22,7 +23,8 @@ Both Hyperdrive and AutoML API are used in this project.
 - Select the best performing model via the comparison
 - Deploy the best performing model as a web service
 - Test the model
-- Deploy pipeline for the best performing model
+- Added screenshots throughout the project
+- Editing/updated readme.md
 
 ![overview](./capstone-diagram.png)
 
@@ -35,10 +37,6 @@ This project uses the Palmer Archipelago penguin data from Kaggle -> https://www
 Palmer Archipelago (Antarctica) penguin data
 
 Data collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.
-
-### Problem Statement
-
-In this project we will consider a regression problem, i.e. a process where a model learns to predict a continuous value output for a given input data. We first apply AutoML where multiple models are trained to fit the training data. We then choose and save the best model, that is, the model with the best score. Secondly, we build a simple neural network consisting of two hidden layers. In particular, a keras model where we tune hyperparameters using HyperDrive.
 
 ### Access
 *TODO*: Explain how you are accessing the data in your workspace.
