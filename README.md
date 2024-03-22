@@ -41,7 +41,10 @@ Palmer Archipelago (Antarctica) penguin data
 Data collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.
 
 ### Access
-*TODO*: Explain how you are accessing the data in your workspace.
+
+A Dataset is created from the external data source.
+
+![access](./screenshots/dataset.png)
 
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
