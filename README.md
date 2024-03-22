@@ -57,6 +57,16 @@ The distribution of data categories:
 - island: Penguins are from 3 islands: Biscoe (168), Dream (124), and Torgersen (52).
 - sex: There are 168 male, 165 female, and 1 ambiguous gender.
 
+There are two models run with this penguin data:
+1. HyperDrive - This uses LinearRegression model. The sklearn library is used to work with this model. 
+   - C paraameter is used which controls the regularization, basically to avoid overfitting the model
+   - max_iter parameter is used which specifies the maximum number of iterations taken for the solvers to converge.
+   - Preprocessing is handled with imputers from sklearn to get data in proper format for model.
+3. AutomML
+   - task parameter set to classification as this is a classification problem.
+   - label_column_name set to 'species' as this is the target field for prediction.
+   - featurization set to 'auto' allowing AutoML to control this.
+
 ### Access
 
 A Dataset is uploaded from the external data source to Azure during creation.
@@ -176,6 +186,32 @@ The HyperDrive approach with the specified parameters resulted in 0.75 accuracy.
 
 ![hyperdrive](./screenshots/Hyperparameter%20Job%20Performance.png)
 
+Hyperdrive run output:
+
+[2024-03-20T18:38:01.601970][GENERATOR][INFO]Trying to sample '4' jobs from the hyperparameter space
+[2024-03-20T18:38:02.2603411Z][SCHEDULER][INFO]Scheduling job, id='HD_8ce5ea1a-0a6b-4f56-9230-12e6f697dd7d_1' 
+[2024-03-20T18:38:02.2265898Z][SCHEDULER][INFO]Scheduling job, id='HD_8ce5ea1a-0a6b-4f56-9230-12e6f697dd7d_0' 
+[2024-03-20T18:38:02.3812686Z][SCHEDULER][INFO]Scheduling job, id='HD_8ce5ea1a-0a6b-4f56-9230-12e6f697dd7d_2' 
+[2024-03-20T18:38:02.4720932Z][SCHEDULER][INFO]Scheduling job, id='HD_8ce5ea1a-0a6b-4f56-9230-12e6f697dd7d_3' 
+[2024-03-20T18:38:02.442419][GENERATOR][INFO]Successfully sampled '4' jobs, they will soon be submitted to the execution target.
+[2024-03-20T18:38:02.9263687Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_8ce5ea1a-0a6b-4f56-9230-12e6f697dd7d_0' 
+[2024-03-20T18:38:03.0099833Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_8ce5ea1a-0a6b-4f56-9230-12e6f697dd7d_2' 
+[2024-03-20T18:38:02.9645510Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_8ce5ea1a-0a6b-4f56-9230-12e6f697dd7d_1' 
+[2024-03-20T18:38:03.2713601Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_8ce5ea1a-0a6b-4f56-9230-12e6f697dd7d_3' 
+[2024-03-20T18:40:01.141075][GENERATOR][INFO]Trying to sample '4' jobs from the hyperparameter space
+[2024-03-20T18:40:01.5384437Z][SCHEDULER][INFO]Scheduling job, id='HD_8ce5ea1a-0a6b-4f56-9230-12e6f697dd7d_4' 
+[2024-03-20T18:40:01.6793582Z][SCHEDULER][INFO]Scheduling job, id='HD_8ce5ea1a-0a6b-4f56-9230-12e6f697dd7d_5' 
+[2024-03-20T18:40:01.7996859Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_8ce5ea1a-0a6b-4f56-9230-12e6f697dd7d_4' 
+[2024-03-20T18:40:01.8064952Z][SCHEDULER][INFO]Scheduling job, id='HD_8ce5ea1a-0a6b-4f56-9230-12e6f697dd7d_6' 
+[2024-03-20T18:40:01.9185047Z][SCHEDULER][INFO]Scheduling job, id='HD_8ce5ea1a-0a6b-4f56-9230-12e6f697dd7d_7' 
+[2024-03-20T18:40:01.9174646Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_8ce5ea1a-0a6b-4f56-9230-12e6f697dd7d_5' 
+[2024-03-20T18:40:01.822364][GENERATOR][INFO]Successfully sampled '4' jobs, they will soon be submitted to the execution target.
+[2024-03-20T18:40:02.0763872Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_8ce5ea1a-0a6b-4f56-9230-12e6f697dd7d_6' 
+[2024-03-20T18:40:02.1592897Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_8ce5ea1a-0a6b-4f56-9230-12e6f697dd7d_7' 
+[2024-03-20T18:40:31.154938][GENERATOR][INFO]Max number of jobs '8' reached for experiment.
+[2024-03-20T18:40:31.300672][GENERATOR][INFO]All jobs generated.
+[2024-03-20T18:41:33.4559368Z][CONTROLLER][INFO]Changing Run Status from Running to Completed 
+
 Best Hyperdrive Model:
 
 ![hyperdrive](./screenshots/Hyperdrive%20-%20best%20model.png)
@@ -189,6 +225,7 @@ The model was deployed as hd_best_model, visible within Models in ML AI Studio.
 ## Model Deployment
 
 AutoML delivered the best peforming model 0.82 Accuracy and 0.96 Weighted AUC which utlized the VotingEnsemble algorhthm. The model was rolled out/registered within Azure ML Studio.
+
 
 ![deployment](./screenshots/best_model_endpoint.png)
 
@@ -216,15 +253,15 @@ Files:
 
 ## Screen Recording
 
-Screen recording of the following items 
+Screen recording of the following items  --> https://youtu.be/Ixdtd0__eFM
 
-https://youtu.be/89jK8EMt6D4:
-
-- A working model
-- Demo of the deployed  model
+The screen recording covers these points:
+- Overview and comparison of two models - 1 from HyperDrive and 1 from AutoML.
+- A working model which is the best model observed from AutoML run.
+- Demo of the deployed model
 - Demo of a sample request sent to the endpoint and its response
 
-## Standout Suggestions
+## Future Improvements
 
 - I think reworking Hyperdrive/parameters with Keras/Tensorflow would greatly improve accuracy.
 - Tweak parameters with AutoML to measure success rate, get a trend.
