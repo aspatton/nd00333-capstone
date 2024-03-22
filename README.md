@@ -32,6 +32,8 @@ In this project we attempt to solve the problem of classifying penguin species f
 
 This project uses the Palmer Archipelago penguin data from Kaggle -> https://www.kaggle.com/datasets/parulpandey/palmer-archipelago-antarctica-penguin-data
 
+![dataset](./screenshots/penguin.png)
+
 ### Overview
 
 Palmer Archipelago (Antarctica) penguin data
